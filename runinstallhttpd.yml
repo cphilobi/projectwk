@@ -4,5 +4,3 @@
   
   roles:
     - httpd
-    - tomcat
-    - jenkins

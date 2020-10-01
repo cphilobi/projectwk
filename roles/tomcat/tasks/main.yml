@@ -1,7 +1,7 @@
 ---
   - name: Install Java
     yum:
-      name: default-jdk
+      name: java
       state: present
 
   - name: Install Tomcat 8

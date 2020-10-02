@@ -5,7 +5,7 @@
   tasks:
     - name: create directory root nduka
       file:
-        name: /home/ansible/nduka
+        name: /peter
         state: directory
         mode: 0775
 

@@ -1,6 +1,7 @@
 - hosts: pwdev
   become: yes
   become_method: sudo
+  remote_user: ansible
   tasks:
     - name: create directory root nduka
       file:

@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages{
+         stage('SCM Checkout'){
+              steps{
+              git 'https://github.com/cphilobi/projectwk.git'
+                    }
+            }
+         stage('execute ansible-playbook'){
+              steps{
+              ansiblePlaybook become: true, becomeUser: 'ansible', credentialsId: '467f3320-ae5b-433b-b44e-6120685ceff4', installation: 'ansible2', inventory: 'projectwkhosts', playbook: 'nightwork.yml'
+                    }
+            }
+     }
+}

@@ -1,0 +1,15 @@
+- hosts: pwdev
+   become: yes
+   become_method: sudo
+   tasks:
+     - name: create directory root nduka
+       file:
+         name: /nduka
+         state: directory
+         mode: 0775
+
+
+     - name: copy fstab file to nduka directory
+       copy:
+         src: /etc/fstab
+         dest: /nduka
